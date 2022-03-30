@@ -6,5 +6,5 @@ numpy>=1.19
 jax==0.2.19
 PyYAML==5.4.1
 scikit_learn==0.24.2
-tensorflow==2.6.0
+tensorflow==2.7.0
 tensorflow_probability==0.13.0

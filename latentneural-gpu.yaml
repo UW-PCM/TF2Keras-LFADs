@@ -202,7 +202,7 @@ dependencies:
     - h5py==3.1.0
     - jax==0.1.75
     - jaxlib==0.1.52
-    - keras-nightly==2.5.0.dev2021032900
+    - keras-nightly==2.7.0.dev2021092307
     - pytest-codecov==0.3.0
     - pytest-cov==2.12.1
     - pytest-ordering==0.6
