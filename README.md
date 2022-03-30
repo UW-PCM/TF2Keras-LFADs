@@ -7,6 +7,7 @@ The TF2+Keras LFADs model is under tndm/models/lfads.py
 
 # Download Miniconda & Create Environment 
 First, download and install minicoda if you have not
+
 Then first run
 `conda create env -f environment.yaml`
 
@@ -17,9 +18,11 @@ Check and Active envirmonment by
 `conda activate TF2Lfads`
 
 Installing pandas 1.0.1 first
+
 `pip install pandas==1.0.1`
 
 Then run
+
 `pip intall -e .`
 
 Finish environment setup
