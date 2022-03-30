@@ -6,12 +6,13 @@ This TF2+Keras LFADs aims to be pushed through HLS4ML flow and load onto a FPGA.
 The TF2+Keras LFADs model is under tndm/models/lfads.py
 
 # Download Miniconda & Create Environment 
-First, download and install minicoda if you have not
+Download and install minicoda if you have not
 
-Then first run
+Then run
+
 `conda create env -f environment.yaml`
 
-Check and Active envirmonment by
+Check and active envirmonment by
 
 `conda env list`
 
