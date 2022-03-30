@@ -1,20 +1,26 @@
-# Targeted Neural Dynamical Modeling
+# TF2-Keras-LFADs
+TF2+Keras LFADs for HLS4ML
+This TF2+Keras LFADs aims to be pushed through HLS4ML flow and load onto a FPGA. The model is borrowed from https://github.com/HennigLab/tndm. 
 
-[![Python Tests](https://github.com/HennigLab/tndm/actions/workflows/python-tests.yml/badge.svg)](https://github.com/uoe-neuro/tndm/actions/workflows/python-tests.yml) [![codecov](https://codecov.io/gh/HennigLab/tndm/branch/main/graph/badge.svg?token=EDXVU3YSEL)](https://codecov.io/gh/HennigLab/tndm) ![TensorFlow Requirement: 2.x](https://img.shields.io/badge/TensorFlow%20Requirement-2.x-brightgreen)
+# Download Miniconda & Create Environment 
+First, download and install minicoda if you have not
+Then first run
+`conda create env -f environment.yaml`
 
-Note: This is a re-implementation (in Tensorflow2) of the original TNDM model. We do not plan to further update the original model, but to view it, please check out the following repo: https://github.com/HennigLab/tndm_paper. We find that the outputs for the two models are very similar when given similar parameters.
+Check and Active envirmonment by
 
-Latent dynamics models have emerged as powerful tools for modeling and interpreting neural population activity. Recently, there has been a focus on incorporating simultaneously measured behaviour into these models to further disentangle sources of neural variability in their latent space. These approaches, however, are limited in their ability to capture the underlying neural dynamics (e.g. linear) and in their ability to relate the learned dynamics back to the observed behaviour (e.g. no time lag). To this end, we introduce Targeted Neural Dynamical Modeling (TNDM), a nonlinear state-space model that jointly models the neural activity and external behavioural variables. TNDM decomposes neural dynamics into behaviourally relevant and behaviourally irrelevant dynamics; the relevant dynamics are used to reconstruct the behaviour through a flexible linear decoder and both sets of dynamics are used to reconstruct the neural activity through a linear decoder with no time lag. We implement TNDM as a sequential variational autoencoder and validate it on recordings taken from the premotor and motor cortex of a monkey performing a center-out reaching task. We show that TNDM is able to learn low-dimensional latent dynamics that are highly predictive of behaviour without sacrificing its fit to the neural data.
+`conda env list`
 
-# Installing the package
+`conda activate TF2Lfads`
 
-In a virtual environment, install all the dependencies and the package using the following commands:
-```
-pip install -e .
-```
+Installing pandas 1.0.1 first
+`pip install pandas==1.0.1`
 
-# Getting started
+Then run
+`pip intall -e .`
 
-```
-python tndm -r <your-settings>.yaml
-```
+Finish environment setup
+
+# Run Model
+Play the TF2+Keras LFADs around by openning the notebooks
+
