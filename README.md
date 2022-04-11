@@ -10,7 +10,7 @@ Download and install minicoda if you have not
 
 Then run
 
-`conda create env -f environment.yaml`
+`conda env create -f environment.yaml`
 
 Check and active envirmonment by
 
