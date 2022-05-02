@@ -5,7 +5,7 @@ from typing import Dict, Any
 from collections import defaultdict
 
 from tndm.utils import ArgsParser, clean_layer_name, logger
-from tndm.layers import GaussianSampling, GeneratorGRU
+from tndm.layers import GeneratorGRU
 from tndm.losses import gaussian_kldiv_loss, poisson_loglike_loss, regularization_loss
 from .model_loader import ModelLoader
 
@@ -93,7 +93,7 @@ class LFADS(ModelLoader, tf.keras.Model):
             self.initial_condition_dim, name="DenseLogVar", **layers['dense_logvar'])
 
         # SAMPLING
-        self.sampling = GaussianSampling(name="GaussianSampling")
+        #self.sampling = GaussianSampling(name="GaussianSampling")
 
         # DECODERS
         if self.decoder_dim != self.initial_condition_dim:
@@ -192,8 +192,9 @@ class LFADS(ModelLoader, tf.keras.Model):
         else:
             logvar = tf.zeros_like(mean) + tf.math.log(self.encoded_var_min)
 
-        g0 = self.sampling(
-            tf.stack([mean, logvar], axis=-1), training=training)
+        #g0 = self.sampling(
+        #    tf.stack([mean, logvar], axis=-1), training=training)
+        g0 = mean
         return g0, mean, logvar
 
     def compile(self, optimizer, loss_weights, *args, **kwargs):
